@@ -5,7 +5,8 @@ namespace lib;
 class Route
 {
     private static $routes = [];
-    private static $URL_BASE = "public/";
+    private static $URL_BASE = "mvc_clase/public/";
+
 
 
     public static function get($url, $calback)
@@ -21,13 +22,17 @@ class Route
     public static function dispatch(){
         $uri = $_SERVER["REQUEST_URI"];
         $method = $_SERVER["REQUEST_METHOD"];
+    
+        
 
         foreach (self::$routes[$method] as $url=>$funcion) {
             if ($uri == $url ) {
+                
                 $funcion();
-                break;
+                return;
             }
         }
+        echo "404";
     }
 
 }

@@ -32,7 +32,7 @@ class Route
                 return;
             }
         }
-        echo "404";
+        echo "4041";
     }
 
 }

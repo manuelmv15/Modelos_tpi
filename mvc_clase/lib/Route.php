@@ -5,7 +5,7 @@ namespace lib;
 class Route
 {
     private static $routes = [];
-    private static $URL_BASE = "mvc_clase/public/";
+    private static $URL_BASE = "/mvc_clase/public";
 
 
 

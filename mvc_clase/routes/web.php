@@ -5,8 +5,9 @@ Route::get("/", function () {
     echo "RUTA RAIZ";
 });
 
-Route::get("/inicio", function () {
-    require_once("../app/views/inicio.php");
+Route::get("/inicio/:flag", function($flag){
+    return  array('nombre'=>"javier");
 });
+
 
 Route::dispatch();
